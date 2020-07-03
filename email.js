@@ -11,6 +11,9 @@ Module.register("email",{
     //             host: 'jjj.kkk.com',
     //             port: 993,
     //             tls: true,
+    // if gmail
+    //             tlsOptions: { servername: 'imap.gmail.com', // See https://github.com/nodejs/node/issues/28167
+    //                                        },
     //             authTimeout: 10000,
     //             numberOfEmails: 5,
     //             fade: true,
@@ -132,12 +135,18 @@ Module.register("email",{
                     }
 
                     // Create fade effect.
+                    
                     if (that.config.fade) {
+                        
                         var startingPoint = that.payload.slice(0, totalEmails).length * 0.25;
+                        var e = 0;
                         var steps = that.payload.slice(0, that.config.numberOfEmails).length - startingPoint;
-                        if (count >= startingPoint) {
-                            var currentStep = count - startingPoint;
+                        /* if (count >= startingPoint) {
+                            var currentStep = count - startingPoint; */
+                        if (e >= startingPoint) {
+                            var currentStep = e - startingPoint;
                             emailWrapper.style.opacity = 1 - (1 / steps * currentStep);
+                            e++;
                         }
                     }
                 });
