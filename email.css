@@ -18,21 +18,3 @@
     color: #080606;
 }
 
-.email .small {
-  margin-top: 0px;
-  font-size: 20px;
-  line-height: 25px;
-}
-
-.email header {
-  text-transform: uppercase;
-  font-size: 15px;
-  font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  border-bottom: 1px solid #666;
-  line-height: 15px;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  margin-top: 30%;
-  color: #999;
-}
